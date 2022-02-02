@@ -22,6 +22,8 @@ body {
     padding-left: 1rem;
     padding-right: 1rem;
     font-family: 'Supermercado One', 'Mitr';
+    padding-bottom: 24rem;
+    overflow-x: hidden;
 }
 
 .heading {
@@ -96,6 +98,16 @@ button:active {
     text-align: center;
     transition: .2s;
     transform: scale(1);
+    padding-top: 6rem;
+}
+
+.qr-code::after {
+    content: "Preview";
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 1.5rem;
+    font-size: 3rem;
 }
 
 .download-btn {
@@ -112,6 +124,28 @@ button:active {
 .download-btn a {
     text-decoration: none;
     color: #000;
+}
+
+.config-input {
+    margin-left: 1.5rem;
+}
+
+.color-config {
+    display: flex;
+    margin: 1rem;
+    background: #f1f1f1;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.color-config input {
+    width: 5rem;
+}
+
+.color-config .access-color {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .footer {

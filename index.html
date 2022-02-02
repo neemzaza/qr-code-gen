@@ -1,36 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QR Code Generator</title>
     <link rel="stylesheet" href="style.css">
+
+    <meta name="title" content="สร้าง Qr Code ที่ถาวรของคุณ" />
+    <meta name="description" content="นี่คือเว็บที่สามารถสร้าง Qr Code ฟรีและถาวร ง่ายๆ" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://qr-code-gen.ml/" />
+    <meta property="og:title" content="สร้าง Qr Code ที่ถาวรของคุณ" />
+    <meta property="og:description"
+        content="นี่คือเว็บที่สามารถสร้าง Qr Code ฟรีและถาวร ง่ายๆ" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="qr-code-gen.ml" />
+    <meta property="twitter:url" content="https://qr-code-gen.ml//" />
+    <meta name="twitter:title" content="สร้าง Qr Code ที่ถาวรของคุณ" />
+    <meta name="twitter:description"
+        content="นี่คือเว็บที่สามารถสร้าง Qr Code ฟรีและถาวร ง่ายๆ" />
 </head>
+
 <body>
     <!--HEADING-->
     <section class="heading">
-        <div class="title">QRCodes Generator<sup>1.0</sup></div>
+        <div class="title">QRCodes Generator<sup>1.1</sup></div>
         <div class="sub-title">สร้าง QRCodes ถาวรสำหรับคุณ</div>
     </section>
 
     <!--USER_INPUT-->
-    <section class="user-input">
-        <label for="input_text">เขียนบางอย่างเพื่อใส่ใน QR Code : </label>
-        <input type="text" name="input_text" placeholder="https://it-airwavy.ml/" id="input_text" autocomplete="off">
-        <button class="button" type="submit">สร้าง QR Code เลย</button>
-    </section>
+    <div class="main-sec">
+        <section class="user-input">
+            <label for="input_text">เขียนบางอย่างเพื่อใส่ใน QR Code : </label>
+            <input type="text" name="input_text" placeholder="https://it-airwavy.ml/" id="input_text"
+                autocomplete="off">
+            <br>
+            <div class="color-config">
+                <div class="access-color">
+                    <label for="input_color_1">ปรับแต่งสีหลัก</label>
+                    <input type="color" name="input_text" placeholder="https://it-airwavy.ml/" id="input_color_1"
+                        autocomplete="off">
+                    <!-- </div> -->
+                    <!-- <div class="background-color"> -->
+                    <label for="input_color_2">ปรับแต่งสีพื้นหลัง</label>
+                    <input type="color" value="#ffffff" name="input_text2" placeholder="https://it-airwavy.ml/"
+                        id="input_color_2" autocomplete="off">
+                </div>
+            </div>
+            <button class="button" type="submit">สร้าง QR Code เลย</button>
+        </section>
+    </div>
 
     <!--QR_CODE-->
     <div class="qr-code" style="display: none;">
-        
+
     </div>
 
     <!-- FOOTER -->
     <div class="footer">
-        <div class="text">สร้างโดย <a href="https://it-airwavy.ml/" target="blank">Airwavy</a> | <a href="https://youtube.com/c/AirwavyIT" target="blank">YouTube</a> - Open source | <a href="https://github.com/neemzaza/qr-code-gen" target="blank">GitHub</a></div>
+        <div class="text">สร้างโดย <a href="https://it-airwavy.ml/" target="blank">Airwavy</a> | <a
+                href="https://youtube.com/c/AirwavyIT" target="blank">YouTube</a> - Open source | <a
+                href="https://github.com/neemzaza/qr-code-gen" target="blank">GitHub</a></div>
     </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script src="script.js"></script>
+
 </html>

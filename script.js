@@ -4,12 +4,15 @@ let qr_code_element = document.querySelector(".qr-code");
 // Button Function
 btn.addEventListener("click", () => {
     let user_input = document.querySelector("#input_text");
+
+    let input_color_1 = document.querySelector("#input_color_1");
+    let input_color_2 = document.querySelector("#input_color_2");
     if (user_input.value != "") {
         if (qr_code_element.childElementCount == 0) {
-            generate(user_input);
+            generate(user_input, input_color_1, input_color_2);
         } else {
             qr_code_element.innerHTML = "";
-            generate(user_input);
+            generate(user_input, input_color_1, input_color_2);
         }
     } else {
         alert("โปรดกรอกสักตัวอักษรเพื่อสร้าง QR Code");
@@ -18,7 +21,7 @@ btn.addEventListener("click", () => {
 })
 
 // Generate QR Code
-function generate(user_input) {
+function generate(user_input, input_color_1, input_color_2) {
     qr_code_element.style = "";
     qr_code_element.style = "transform: scale(1.125);"
     setTimeout(() => {
@@ -29,8 +32,8 @@ function generate(user_input) {
         text: `${user_input.value}`,
         width: 180,
         height: 180,
-        colorDark: "#000",
-        colorLight: "#fff",
+        colorDark: `${input_color_1.value}`,
+        colorLight: `${input_color_2.value}`,
         correctLevel: QRCode.CorrectLevel.H
     });
 
